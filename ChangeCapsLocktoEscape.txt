@@ -1,0 +1,3 @@
+/usr/bin/setxkbmap -option "caps:escape"
+
+Ideally you want to put it some place that auto runs this command. I have it set up in the ubuntu mate auto startup program list.
