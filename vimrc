@@ -280,4 +280,8 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
+" Make vim treat all .md files as markdown
 autocmd BufRead,BufNew *.md setf markdown
+" Set wordwrap for markdown files
+autocmd Filetype markdown setlocal wrap
+autocmd Filetype markdown setlocal linebreak
