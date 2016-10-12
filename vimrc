@@ -9,8 +9,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 "Helpful finder
 Plug 'ctrlpvim/ctrlp.vim'
-"Light weight tab completion
-Plug 'ajh17/VimCompletesMe'
 call plug#end()
 
 "Dont care about VI mode
@@ -32,7 +30,7 @@ colorscheme molokai
 "correct
 if !has('gui_running')
   let g:rehash256 = 1
-  let g:molokai_original = 1
+  "let g:molokai_original = 1
   "essential to make regular vim use 256 colors
   set t_Co=256
 endif
@@ -160,18 +158,6 @@ set confirm
 "Go up/down more lines when scrolling
 set scrolloff=5
 
-"enable folding
-set foldenable
-
-"open folds by default
-set foldlevelstart=99
-
-"if a go file then use syntax for folding
-autocmd FileType go set foldmethod=syntax
-
-"if a python file then use indent for folding
-autocmd FileType py set foldmethod=indent
-
 "Shortcuts for dealing with buffers
 :nmap <leader>b :ls<CR>
 :nmap <leader>bl :ls<CR>
@@ -228,23 +214,6 @@ nnoremap <leader>;; :CtrlPMRU<CR>
 inoremap jk <ESC>
 inoremap jj <ESC>
 
-"Triggers vim omnicomplete when possible when using Tab
-"function! SuperCleverTab()
-"    if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-"        return "\<Tab>"
-"    else
-"        if &omnifunc != ''
-"            return "\<C-X>\<C-O>"
-"        elseif &dictionary != ''
-"            return "\<C-K>"
-"        else
-"            return "\<C-N>"
-"        endif
-"    endif
-"endfunction
-
-"inoremap <Tab> <C-R>=SuperCleverTab()<cr>
-
 "Needed to get rid of the preview window when using omnicomplete
 "commenting out for better method below
 "autocmd CompleteDone * pclose
@@ -256,7 +225,7 @@ augroup end
 
 "Make the font size slightly larger in gvim
 if has('gui_running')
-	set guifont=Monospace\ 11
+	set guifont=Inconsolata\ 13
 endif
 
 " clear the search buffer when hitting return
