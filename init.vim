@@ -223,7 +223,7 @@ nnoremap j gj
 nnoremap gk k
 nnoremap gj j
 
-"remap arrow keys for know to force the hjkl habbit
+"remap arrow keys for now to force the hjkl habbit
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
@@ -239,4 +239,5 @@ autocmd BufRead,BufNew *.md setf markdown
 autocmd Filetype markdown setlocal wrap
 autocmd Filetype markdown setlocal linebreak
 
-
+"Auto open Tagbar when using Go files
+autocmd BufEnter *.go nested TagbarOpen

@@ -254,3 +254,6 @@ autocmd BufRead,BufNew *.md setf markdown
 " Set wordwrap for markdown files
 autocmd Filetype markdown setlocal wrap
 autocmd Filetype markdown setlocal linebreak
+
+"Auto open Tagbar when using Go files
+autocmd BufEnter *.go nested TagbarOpen
