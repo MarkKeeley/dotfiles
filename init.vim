@@ -26,7 +26,7 @@ let mapleader = "\<space>"
 set autowrite
 
 "Shortcuts for go run
-autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>gr  <Plug>(go-run)
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
@@ -38,7 +38,7 @@ function! s:build_go_files()
   endif
 endfunction
 
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
 
 "Use goimports when saving files instead of gofmt
 let g:go_fmt_command = "goimports"
@@ -134,7 +134,7 @@ set confirm
 set scrolloff=5
 
 "Shortcuts for dealing with buffers
-:nmap <leader>b :ls<CR>
+":nmap <leader>b :ls<CR>
 :nmap <leader>bl :ls<CR>
 :nmap <leader>bn :bnext<CR>
 :nmap <leader>bp :bprev<CR>
@@ -191,17 +191,17 @@ nnoremap <leader>go :copen<CR>
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend|pdf|mkv|epub|img|iso|opml|gif|jpg|png|bmp|AppImage|zip|jpeg|wma|flac|mp4|ttf)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 
 "Use CtrlP to list buffers
-nnoremap <leader>; :CtrlPBuffer<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 "Use CtrlP to open files
 nnoremap <leader>f :CtrlP<CR>
 
 "Use CtrlP to open most recently used
-nnoremap <leader>;; :CtrlPMRU<CR>
+nnoremap <leader>; :CtrlPMRU<CR>
 
 "Go Back to command mode without hitting ESC key
-inoremap jk <ESC>
-inoremap jj <ESC>
+"inoremap jk <ESC>
+"inoremap jj <ESC>
 
 "Needed to get rid of the preview window when using omnicomplete
 "commenting out for better method below
@@ -240,4 +240,4 @@ autocmd Filetype markdown setlocal wrap
 autocmd Filetype markdown setlocal linebreak
 
 "Auto open Tagbar when using Go files
-autocmd BufEnter *.go nested TagbarOpen
+"autocmd BufEnter *.go nested TagbarOpen
