@@ -1,0 +1,73 @@
+markkeeley.us {
+	root /var/www/markkeeley/html
+	gzip
+	tls markkeeley@gmail.com
+	errors {
+		404 404.html
+	}
+}
+
+www.markkeeley.us {
+        redir https://markkeeley.us{uri}
+}
+
+
+http://edkeeley.com {
+        root /var/www/edkeeley/html
+        gzip
+        errors {
+                404 404.html
+        }
+}
+
+www.edkeeley.com {
+        redir http://edkeeley.com{uri}
+}
+
+http://scaro.net {
+        root /var/www/scaro/html
+        gzip
+        errors {
+                404 404.html
+        }
+}
+
+www.scaro.net {
+        redir http://scaro.net{uri}
+}
+
+http://volumous.com {
+        root /var/www/volumous/html
+        gzip
+        errors {
+                404 404.html
+        }
+}
+
+www.volumous.com {
+        redir http://volumous.com{uri}
+}
+
+http://intringency.com {
+        root /var/www/intringency/html
+        gzip
+        errors {
+                404 404.html
+        }
+}
+
+www.intringency.com {
+        redir http://intringency.com{uri}
+}
+
+http://keeleyenterprises.com {
+        root /var/www/keeleyenterprises/html
+        gzip
+        errors {
+                404 404.html
+        }
+}
+
+www.keeleyenterprises.com {
+        redir http://keeleyenterprises.com{uri}
+}
